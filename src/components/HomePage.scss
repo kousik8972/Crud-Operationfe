@@ -1,0 +1,86 @@
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #4990e7;
+
+    .SubContainer {
+        height: fit-content;
+        width: 600px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        //margin: 50px auto;
+        margin: 50px 0 0 0;
+
+        .Box1 {
+            width: 100%;
+            height: 250px;
+            border: 0.5px solid lightgray;
+            background-color: white;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+            @extend .flexCenter;
+
+            .Input-Container {
+                width: 80%;
+                height: 80%;
+                @extend .flexCenter;
+                flex-direction: column;
+
+                .flex-Container{
+                    width: 80%;
+                    margin: 5px;
+                }
+
+                .flex-button{
+                    margin: 15px auto;
+                }
+
+            }
+        }
+
+        .Box2 {
+            width: 100%;
+            height: fit-content;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+            background-color: white;
+            flex-direction: column;
+
+            .data-flex{
+                height: 50px;
+                display: flex;
+                align-items: center;
+                border-bottom: 0.5 px solid lightgrey;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                margin: 5px 0 0 0;
+
+                .UserId{
+                    flex: 5;
+                    @extend .flexCenter;
+                }
+
+                .UserName{
+                    flex: 15;
+                    @extend .flexCenter;
+                }
+
+                .Age{
+                    flex: 5;
+                    @extend .flexCenter;
+                }
+
+                .Update, .Delete{
+                    flex: 2;
+                    margin: 6px 5px;
+                }
+                
+            }
+        }
+    }
+}
